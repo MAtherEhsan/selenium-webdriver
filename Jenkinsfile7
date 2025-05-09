@@ -21,4 +21,10 @@ pipeline {
                 }
             }
         }
+     post {
+            always {
+                // Cleanup: remove any unused images, volumes, etc.
+                sh 'docker system prune -af'
+            }
+        }
 }
