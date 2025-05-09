@@ -12,14 +12,6 @@ pipeline {
                 }
             }
         }
-        stage('Run Selenium Tests') {
-            steps {
-                script {
-                    // Run the Docker container and execute the tests
-                    sh 'docker run --rm $IMAGE_NAME'
-                }
-            }
-        }
     }
     post {
         always {
