@@ -27,5 +27,5 @@ message = driver.find_element(by=By.ID, value="message")
 value = message.text
 print(value)
 
-assert value == "Received!"
+assert value == "Sent!"
 driver.quit()
