@@ -13,10 +13,12 @@ pipeline {
             }
         }
     }
-    post {
-        always {
-            // Cleanup: remove any unused images, volumes, etc.
-            sh 'docker system prune -af'
+    stage('Run Selenium Tests') {
+            steps {
+                script {
+                    // Run the Docker container and execute the tests
+                    sh 'docker run --rm $IMAGE_NAME'
+                }
+            }
         }
-    }
 }
