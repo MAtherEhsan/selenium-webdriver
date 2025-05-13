@@ -9,9 +9,7 @@ pipeline {
                 script {
                     // Build the Docker image
                     sh '''docker build -t $IMAGE_NAME .
-                          docker images'''
-                    sh 'docker info'
-                    
+                          docker images'''                    
                 }
             }
         }
@@ -21,7 +19,6 @@ pipeline {
                     // Run the Docker container and execute the tests
                     // sh 'docker run --rm ${env.IMAGE_NAME}'
                      sh 'docker run $IMAGE_NAME'
-                     sh 'docker ps'
                 }
             }
         }
@@ -29,7 +26,6 @@ pipeline {
      post {
             always {
                 // Cleanup: remove any unused images, volumes, etc.
-                sh 'docker ps'
                 sh 'docker system prune -af'
             }
         }
