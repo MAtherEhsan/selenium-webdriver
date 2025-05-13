@@ -17,7 +17,7 @@ pipeline {
                 script {
                     // Run the Docker container and execute the tests
                     // sh 'docker run --rm $IMAGE_NAME'
-                     sh 'docker run --name $IMAGE_NAME'
+                     sh 'docker run --name $IMAGE_NAME $IMAGE_NAME'
                 }
             }
         }
