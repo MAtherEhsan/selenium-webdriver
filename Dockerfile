@@ -20,7 +20,7 @@ RUN apt update && apt install -y \
     && chmod +x /usr/bin/chromedriver \
     && apt install python3-pip -y \
     && pip install selenium --break-system-packages \
-    && pip install webdriver-manager --break-system-packages \
+    #&& pip install webdriver-manager --break-system-packages \
     && rm chromedriver-linux64.zip google-chrome-stable_current_amd64.deb
 
 # Copy selenium testcase code
