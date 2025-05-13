@@ -5,7 +5,7 @@ FROM python:3.8-slim
 WORKDIR /app
 
 # Set environment variables to disable interactive prompts
-ENV DEBIAN_FRONTEND=noninteractive
+# ENV DEBIAN_FRONTEND=noninteractive
 
 # Install system dependencies and Chrome dependencies
 RUN apt update && apt install -y \
