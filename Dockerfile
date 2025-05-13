@@ -16,7 +16,7 @@ RUN apt update && apt install -y \
     && wget https://storage.googleapis.com/chrome-for-testing-public/136.0.7103.59/linux64/chromedriver-linux64.zip \
     && unzip chromedriver-linux64.zip \
     && mv chromedriver-linux64/chromedriver /usr/bin/chromedriver \
-    && chown root:root /usr/bin/chromedriver \
+    #&& chown root:root /usr/bin/chromedriver \
     && chmod +x /usr/bin/chromedriver \
     && apt install python3-pip -y \
     && pip install selenium --break-system-packages \
