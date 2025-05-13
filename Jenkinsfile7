@@ -17,7 +17,7 @@ pipeline {
                 script {
                     // Run the Docker container and execute the tests
                     // sh 'docker run --rm ${env.IMAGE_NAME}'
-                     sh 'docker run --name selenium-test selenium-test'
+                     sh 'docker run elenium-test'
                 }
             }
         }
