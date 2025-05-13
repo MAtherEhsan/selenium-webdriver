@@ -12,7 +12,6 @@ pipeline {
                 }
             }
         }
-    }
     stage('Run Selenium Tests') {
             steps {
                 script {
@@ -21,6 +20,7 @@ pipeline {
                 }
             }
         }
+    }
      post {
             always {
                 // Cleanup: remove any unused images, volumes, etc.
