@@ -9,8 +9,7 @@ pipeline {
                 script {
                     // Build the Docker image
                     sh '''docker build -t selenium-test .
-                          docker images
-                          docker ps'''
+                          docker images'''
                     
                 }
             }
@@ -21,6 +20,7 @@ pipeline {
                     // Run the Docker container and execute the tests
                     // sh 'docker run --rm ${env.IMAGE_NAME}'
                      sh 'docker run selenium-test'
+                     sh 'docker ps'
                 }
             }
         }
